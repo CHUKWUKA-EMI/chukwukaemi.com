@@ -41,11 +41,11 @@ const LightThemeIcon = () => {
   );
 };
 
-interface SwitchButtonProps {
+interface IProps {
   className?: string;
 }
 
-const SwitchButton = ({ className }: SwitchButtonProps) => {
+const ThemeToggleButton = ({ className }: IProps) => {
   const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
@@ -54,20 +54,18 @@ const SwitchButton = ({ className }: SwitchButtonProps) => {
 
   return (
     <div
+      role="button"
       onClick={toggleTheme}
-      className={`${className} cursor-pointer flex items-center justify-between gap-1 bg-gray-800 ring-1 ring-gray-500 dark:ring-gray-600 h-fit w-fit rounded-3xl`}
+      className={`${className} cursor-pointer flex items-center justify-between gap-1 ring-1 ring-gray-500 bg-gray-600 dark:ring-gray-600 h-fit w-fit rounded-3xl`}
     >
-      <button
-        onClick={toggleTheme}
-        className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-gray-200 bg-transparent`}
-      >
+      <button className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-gray-200 bg-transparent`}>
         <LightThemeIcon />
       </button>
-      <button onClick={toggleTheme} className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-inherit bg-gray-200`}>
+      <button className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-inherit bg-gray-200`}>
         <DarkThemeIcon />
       </button>
     </div>
   );
 };
 
-export default SwitchButton;
+export default ThemeToggleButton;

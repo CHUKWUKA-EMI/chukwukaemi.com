@@ -1,14 +1,8 @@
-// import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ThemeProvider from './components/ThemeContext';
 
 const inter = Inter({ subsets: ['latin'] });
-
-// export const metadata: Metadata = {
-//   title: 'Chukwuka Emi',
-//   description: 'Senior Software Engineer | Cloud Architect'
-// };
 
 export default function RootLayout({
   children

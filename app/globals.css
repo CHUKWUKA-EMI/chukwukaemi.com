@@ -12,3 +12,9 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .link-underline {
+    @apply before:content-[""] before:absolute before:w-full before:h-[2px] before:-bottom-1 dark:before:bg-amber-400 before:bg-amber-600;
+  }
+}
