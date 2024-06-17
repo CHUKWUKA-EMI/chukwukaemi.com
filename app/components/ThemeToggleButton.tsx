@@ -11,7 +11,7 @@ const DarkThemeIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-full h-full text-gray-300 dark:block hidden"
+      className="w-full h-full fill-gray-300 text-gray-300 dark:block hidden"
     >
       <path
         strokeLinecap="round"
@@ -58,10 +58,10 @@ const ThemeToggleButton = ({ className }: IProps) => {
       onClick={toggleTheme}
       className={`${className} cursor-pointer flex items-center justify-between gap-1 ring-1 ring-gray-500 bg-gray-600 dark:ring-gray-600 h-fit w-fit rounded-3xl`}
     >
-      <button className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-gray-200 bg-transparent`}>
+      <button
+        className={`rounded-[100%] w-7 h-7 xs:w-7 xs:h-7 p-1 dark:bg-gray-800 bg-transparent`}
+      >
         <LightThemeIcon />
-      </button>
-      <button className={`rounded-[100%] w-6 h-6 xs:w-9 xs:h-9 p-1 dark:bg-inherit bg-gray-200`}>
         <DarkThemeIcon />
       </button>
     </div>

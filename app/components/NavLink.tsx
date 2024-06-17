@@ -15,7 +15,11 @@ const NavLink = ({
   children: ReactNode;
 }) => {
   return (
-    <Link onClick={onClick} className={`${className} w-fit relative`} href={href}>
+    <Link
+      onClick={onClick}
+      className={`${className} w-fit relative`}
+      href={href}
+    >
       {children}
     </Link>
   );
